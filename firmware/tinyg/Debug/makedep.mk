@@ -2,87 +2,89 @@
 # Automatically-generated file. Do not edit or delete the file
 ################################################################################
 
-canonical_machine.c
+src\ASF\common\boards\user_board\init.c
 
-config.c
+src\canonical_machine.c
 
-config_app.c
+src\config.c
 
-controller.c
+src\config_app.c
 
-cycle_homing.c
+src\controller.c
 
-cycle_jogging.c
+src\cycle_homing.c
 
-cycle_probing.c
+src\cycle_jogging.c
 
-encoder.c
+src\cycle_probing.c
 
-gcode_parser.c
+src\encoder.c
 
-gpio.c
+src\gcode_parser.c
 
-hardware.c
+src\gpio.c
 
-help.c
+src\hardware.c
 
-json_parser.c
+src\help.c
 
-kinematics.c
+src\json_parser.c
 
-main.c
+src\kinematics.c
 
-network.c
+src\main.c
 
-persistence.c
+src\network.c
 
-planner.c
+src\persistence.c
 
-plan_arc.c
+src\planner.c
 
-plan_exec.c
+src\plan_arc.c
 
-plan_line.c
+src\plan_exec.c
 
-plan_zoid.c
+src\plan_line.c
 
-pwm.c
+src\plan_zoid.c
 
-report.c
+src\pwm.c
 
-spindle.c
+src\report.c
 
-stepper.c
+src\spindle.c
 
-switch.c
+src\stepper.c
 
-test.c
+src\switch.c
 
-text_parser.c
+src\test.c
 
-util.c
+src\text_parser.c
 
-xio.c
+src\util.c
 
-xio\xio_file.c
+src\xio.c
 
-xio\xio_pgm.c
+src\xio\xio_file.c
 
-xio\xio_rs485.c
+src\xio\xio_pgm.c
 
-xio\xio_spi.c
+src\xio\xio_rs485.c
 
-xio\xio_usart.c
+src\xio\xio_spi.c
 
-xio\xio_usb.c
+src\xio\xio_usart.c
 
-xmega\xmega_adc.c
+src\xio\xio_usb.c
 
-xmega\xmega_eeprom.c
+src\xmega\xmega_adc.c
 
-xmega\xmega_init.c
+src\xmega\xmega_eeprom.c
 
-xmega\xmega_interrupts.c
+src\xmega\xmega_init.c
 
-xmega\xmega_rtc.c
+src\xmega\xmega_interrupts.c
+
+src\xmega\xmega_rtc.c
 
