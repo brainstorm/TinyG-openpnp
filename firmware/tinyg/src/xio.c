@@ -176,7 +176,7 @@ void xio_reset_working_flags(xioDev_t *d)
 /*
  * xio_init_device() - generic initialization function for any device
  *
- *	This binds the main fucntions and sets up the stdio FILE structure
+ *	This binds the main functions and sets up the stdio FILE structure
  *	udata is used to point back to the device struct so it can be gotten
  *	from getc() and putc() functions.
  *
@@ -295,7 +295,7 @@ void xio_fc_null(xioDev_t *d)
  * xio_set_stderr() - set stderr from device number
  *
  *	stderr is defined in stdio as __iob[2]. Turns out stderr is the last RAM
- *	allocated by the linker for this project. We usae that to keep a shadow
+ *	allocated by the linker for this project. We use that to keep a shadow
  *	of __iob[2] for stack overflow detection and other memory corruption.
  */
 void xio_set_stdin(const uint8_t dev) { stdin  = &ds[dev].file; }

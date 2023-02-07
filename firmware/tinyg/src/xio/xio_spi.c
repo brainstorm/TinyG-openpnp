@@ -121,6 +121,7 @@ static cfgSpi_t const cfgSpi[] PROGMEM = {
 		SPI_OUTCLR_bm,
 		SPI_OUTSET_bm,
 	},
+	/*
 	{
 		xio_open_spi,			// SPI #2 configs
 		xio_ctrl_generic,
@@ -130,13 +131,14 @@ static cfgSpi_t const cfgSpi[] PROGMEM = {
 		xio_fc_null,
 		BIT_BANG,
 		&SPI_DATA_PORT,
-		//&SPI__PORT,
-		//SPI_SS2_bm,
+		&SPI__PORT,
+		SPI_SS2_bm,
 		SPI_INBITS_bm,
 		SPI_OUTBITS_bm,
 		SPI_OUTCLR_bm,
 		SPI_OUTSET_bm,
 	}
+	*/
 };
 
 /******************************************************************************

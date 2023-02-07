@@ -137,7 +137,7 @@ uint16_t ADC_ResultCh_GetWord_Unsigned(ADC_CH_t * adc_ch, uint8_t offset)
 
 /* There are two ADC pins available
  * J15 pin 2 = pB0
- * J13 pin 2 = PB3 <- this is the best option as it's only confiured at /SS2 For an external SPI Interface
+ * J13 pin 2 = PB3 <- this is the best option as it's only configured at /SS2 For an external SPI Interface
 */
 void adc_init() 
 {
