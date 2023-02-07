@@ -69,13 +69,13 @@
 #define SPI_SS1_bp  	4					// SS1 - slave select #1
 // additional slave selects
 #define SPI_SS2_PORT	PORTB
-#define SPI_SS2_bp  	3					// SS1 - slave select #2
+//#define SPI_SS2_bp  	3					// SS1 - slave select #2
 
 #define SPI_MOSI_bm 	(1<<SPI_MOSI_bp)	// bit masks for the above
 #define SPI_MISO_bm 	(1<<SPI_MISO_bp)
 #define SPI_SCK_bm 		(1<<SPI_SCK_bp)
 #define SPI_SS1_bm 		(1<<SPI_SS1_bp)
-#define SPI_SS2_bm 		(1<<SPI_SS2_bp)
+//#define SPI_SS2_bm 		(1<<SPI_SS2_bp)
 
 #define SPI_INBITS_bm 	(SPI_MISO_bm)
 #define SPI_OUTBITS_bm 	(SPI_MOSI_bm | SPI_SCK_bm | SPI_SS1_bm)
