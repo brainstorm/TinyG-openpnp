@@ -88,13 +88,14 @@ void pwm_init()
 #ifdef __AVR
 	gpio_set_bit_off(SPINDLE_PWM);
 
+/*
 	// setup PWM channel 1
 	memset(&pwm.p[PWM_1], 0, sizeof(pwmChannel_t));		// clear parent structure
 	pwm.p[PWM_1].timer = &TIMER_PWM1;					// bind timer struct to PWM struct array
 	pwm.p[PWM_1].ctrla = PWM1_CTRLA_CLKSEL;				// initialize starting clock operating range
 	pwm.p[PWM_1].timer->CTRLB = PWM1_CTRLB;
 	pwm.p[PWM_1].timer->INTCTRLB = PWM1_INTCTRLB;		// set interrupt level
-
+*/
 	// setup PWM channel 2
 	memset(&pwm.p[PWM_2], 0, sizeof(pwmChannel_t));		// clear all values, pointers and status
 	pwm.p[PWM_2].timer = &TIMER_PWM2;
@@ -108,10 +109,12 @@ void pwm_init()
  * ISRs for PWM timers
  */
 #ifdef __AVR
+/*
 ISR(PWM1_ISR_vect)
 {
 	return;
 }
+*/
 
 ISR(PWM2_ISR_vect)
 {
@@ -171,7 +174,7 @@ stat_t pwm_set_freq(uint8_t chan, float freq)
 
 #ifdef __ARM
 	if (chan == PWM_1) {
-		spindle_pwm_pin.setFrequency(freq);
+		//spindle_pwm_pin.setFrequency(freq);
 	} else if (chan == PWM_2) {
 		secondary_pwm_pin.setFrequency(freq);
 	}
@@ -207,7 +210,7 @@ stat_t pwm_set_duty(uint8_t chan, float duty)
 
 	#ifdef __ARM
 	if (chan == PWM_1) {
-		spindle_pwm_pin = duty;
+//		spindle_pwm_pin = duty;
 	} else if (chan == PWM_2) {
 		secondary_pwm_pin = duty;
 	}
@@ -231,7 +234,7 @@ stat_t pwm_set_duty(uint8_t chan, float duty)
  ***********************************************************************************/
 
 #ifdef __TEXT_MODE
-
+/*
 static const char fmt_p1frq[] PROGMEM = "[p1frq] pwm frequency   %15.0f Hz\n";
 static const char fmt_p1csl[] PROGMEM = "[p1csl] pwm cw speed lo %15.0f RPM\n";
 static const char fmt_p1csh[] PROGMEM = "[p1csh] pwm cw speed hi %15.0f RPM\n";
@@ -253,7 +256,7 @@ void pwm_print_p1wsh(nvObj_t *nv) { text_print_flt(nv, fmt_p1wsh);}
 void pwm_print_p1wpl(nvObj_t *nv) { text_print_flt(nv, fmt_p1wpl);}
 void pwm_print_p1wph(nvObj_t *nv) { text_print_flt(nv, fmt_p1wph);}
 void pwm_print_p1pof(nvObj_t *nv) { text_print_flt(nv, fmt_p1pof);}
-
+*/
 #endif //__TEXT_MODE
 
 #ifdef __cplusplus

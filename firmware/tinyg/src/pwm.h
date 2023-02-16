@@ -66,7 +66,7 @@ stat_t pwm_set_freq(uint8_t channel, float freq);
 stat_t pwm_set_duty(uint8_t channel, float duty);
 
 #ifdef __TEXT_MODE
-
+/*
 	void pwm_print_p1frq(nvObj_t *nv);
 	void pwm_print_p1csl(nvObj_t *nv);
 	void pwm_print_p1csh(nvObj_t *nv);
@@ -90,7 +90,7 @@ stat_t pwm_set_duty(uint8_t channel, float duty);
 	#define pwm_print_p1wpl tx_print_stub
 	#define pwm_print_p1wph tx_print_stub
 	#define pwm_print_p1pof tx_print_stub
-
+*/
 #endif // __TEXT_MODE
 
 #ifdef __cplusplus
