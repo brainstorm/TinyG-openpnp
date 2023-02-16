@@ -145,7 +145,7 @@ void adc_init()
 	ADC_CalibrationValues_Load(&ADCB);
 	
 	/* Set up ADC to have unsigned conversion mode and 12 bit resolution. */
-	ADC_ConvMode_and_Resolution_Config(&ADCB, ADC_ConvMode_Unsigned, ADC_RESOLUTION_12BIT_gc);
+	ADC_ConvMode_and_Resolution_Config(&ADCB, ADC_ConvMode_Signed, ADC_RESOLUTION_12BIT_gc);
 	
 	/* Set sample rate. */
 	ADC_Prescaler_Config(&ADCB, ADC_PRESCALER_DIV32_gc);
@@ -153,11 +153,11 @@ void adc_init()
 	/* Set reference voltage on ADC to be VCC/1.6 V.*/
 	ADC_Reference_Config(&ADCB, ADC_REFSEL_VCC_gc);
 	
-	/* Setup channel 0 */
-	ADC_Ch_InputMode_and_Gain_Config(&ADCB.CH0, ADC_CH_INPUTMODE_SINGLEENDED_gc, ADC_CH_GAIN_1X_gc);
+	/* Setup channel 0, differential mode, 1X gain */
+	ADC_Ch_InputMode_and_Gain_Config(&ADCB.CH0, ADC_CH_INPUTMODE_DIFF_gc, ADC_CH_GAIN_1X_gc);
 	
-	/* Set input to the channels in ADC */
-	ADC_Ch_InputMux_Config(&ADCB.CH0, ADC_CH_MUXPOS_PIN3_gc, 0);
+	/* Set input to the channels in ADC, differential between PIN0 and PIN3 (J16 jumper) */
+	ADC_Ch_InputMux_Config(&ADCB.CH0, ADC_CH_MUXPOS_PIN3_gc, ADC_CH_MUXPOS_PIN0_gc);
 
 	/* Enable ADC */
 	ADC_Enable(&ADCB);
