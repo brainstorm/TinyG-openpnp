@@ -141,6 +141,9 @@ uint16_t ADC_ResultCh_GetWord_Unsigned(ADC_CH_t * adc_ch, uint8_t offset)
 */
 void adc_init() 
 {
+	/* Make extra sure PB3 is not an output port */
+	PORTB.DIR &= ~0x03;
+	
 	/* Move stored calibration values to ADC. */
 	ADC_CalibrationValues_Load(&ADCB);
 	
