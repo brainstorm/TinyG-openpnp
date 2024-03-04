@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "tinyg.h": "c"
+    },
+    "cmake.sourceDirectory": "${workspaceFolder}/firmware/tinyg"
+}
