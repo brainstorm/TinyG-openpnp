@@ -40,6 +40,7 @@
 #include <avr/interrupt.h>
 #include "xmega/xmega_interrupts.h"
 #include "xmega/xmega_adc.h"
+#include "xmega/xmega_twi.h"
 #endif // __AVR
 
 #ifdef __ARM
@@ -124,6 +125,7 @@ static void _application_init(void)
 
 	// do these next
 	stepper_init(); 				// stepper subsystem 				- must precede gpio_init()
+	twi_init();						// I2C bus (a.k.a TWI)
 	encoder_init();					// virtual encoders
 	switch_init();					// switches
 //	gpio_init();					// parallel IO

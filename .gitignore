@@ -3,4 +3,5 @@ firmware/tinyg/default/path
 firmware/tinyg/Release/Makefile
 firmware/tinyg/Release/makedep.mk
 firmware/tinyg/default/path
+build
 tinyg.hex

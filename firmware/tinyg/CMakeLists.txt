@@ -20,6 +20,7 @@ add_executable(tinyg.elf
     cycle_jogging.c
     cycle_probing.c
     encoder.c
+    encoder_as5600.c
     gcode_parser.c
     gpio.c
     hardware.c
@@ -54,6 +55,7 @@ add_executable(tinyg.elf
     xmega/xmega_init.c
     xmega/xmega_interrupts.c
     xmega/xmega_rtc.c
+    xmega/xmega_twi.c
 )
 
 target_compile_definitions(tinyg.elf PRIVATE

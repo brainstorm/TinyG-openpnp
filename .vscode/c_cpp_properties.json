@@ -3,14 +3,26 @@
         {
             "name": "Mac",
             "includePath": [
-                "${workspaceFolder}/**"
+                "${workspaceFolder}/**",
+                "/opt/homebrew/Cellar/avr-gcc@12/12.2.0_2/avr/include/**"
             ],
-            "defines": [],
+            "defines": [
+                "__AVR",
+                "__DOXYGEN__",
+                "__AVR_ATxmega192A3__",
+                "AS_5600_ENCODER"
+            ],
             "macFrameworkPath": [
                 "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks"
             ],
             "compilerPath": "/opt/homebrew/opt/avr-gcc@12/bin/avr-gcc",
-            "cStandard": "c17"
+            "cStandard": "c17",
+            "intelliSenseMode": "linux-gcc-x64",
+            "compilerArgs": [
+                "-mmcu=atmega192a3",     // Will ensure MCU defines are set correctly
+                "-DF_CPU=16000000UL",   // Will ensure F_CPU is set correctly
+                "-Os"                   // Will avoid optimization warnings re: _delay
+            ]
         }
     ],
     "version": 4

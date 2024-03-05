@@ -47,6 +47,9 @@ enEncoders_t en;
 
 void encoder_init()
 {
+#ifdef AS_5600_ENCODER
+	as5600_init();
+#endif
 	memset(&en, 0, sizeof(en));		// clear all values, pointers and status
 	encoder_init_assertions();
 }

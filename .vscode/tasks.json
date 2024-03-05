@@ -12,8 +12,20 @@
 				"kind": "build",
 				"isDefault": true
 			},
-			"problemMatcher": [],
+			"problemMatcher": [
+				"$gcc"
+			],
 			"detail": "CMake template build task"
 		}
+	],
+    "inputs": [
+        { 
+            "type": "pickString", 
+            "id": "makeTarget", "description": "Select a build target", 
+            "options": [
+                "make -j $(nprocs)", "sudo make flash", "make disassemble", "make squeaky_clean", "make size", "make debug",
+            ],
+            "default": "make -j $(nprocs)"
+        }
 	]
 }

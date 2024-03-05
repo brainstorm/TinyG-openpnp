@@ -17,5 +17,6 @@
 *.srec
 *.aws
 *.atsuo
+build
 .DS_Store
 TcfTransactionLog.csv
