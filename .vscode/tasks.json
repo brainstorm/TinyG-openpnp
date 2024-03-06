@@ -23,7 +23,7 @@
             "type": "pickString", 
             "id": "makeTarget", "description": "Select a build target", 
             "options": [
-                "make -j $(nprocs)", "sudo make flash", "make disassemble", "make squeaky_clean", "make size", "make debug",
+                "make -j $(nprocs)"
             ],
             "default": "make -j $(nprocs)"
         }

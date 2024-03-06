@@ -3,5 +3,5 @@
         "tinyg.h": "c",
         "xio.h": "c"
     },
-    "cmake.sourceDirectory": "${workspaceFolder}/firmware/tinyg"
+    "cmake.sourceDirectory": "/home/rvalls/dev/personal/TinyG-openpnp/firmware/tinyg"
 }

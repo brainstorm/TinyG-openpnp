@@ -1,6 +1,27 @@
 {
     "configurations": [
         {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/usr/include/**"
+            ],
+            "defines": [
+                "__AVR",
+                "__DOXYGEN__",
+                "__AVR_ATxmega192A3__",
+                "AS_5600_ENCODER"
+            ],
+            "compilerPath": "/usr/bin/avr-gcc",
+            "cStandard": "c17",
+            "intelliSenseMode": "linux-gcc-x64",
+            "compilerArgs": [
+                "-mmcu=atmega192a3",     // Will ensure MCU defines are set correctly
+                "-DF_CPU=16000000UL",   // Will ensure F_CPU is set correctly
+                "-Os"                   // Will avoid optimization warnings re: _delay
+            ]
+        },
+        {
             "name": "Mac",
             "includePath": [
                 "${workspaceFolder}/**",
