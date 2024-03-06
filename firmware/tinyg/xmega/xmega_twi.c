@@ -37,7 +37,14 @@ void set_baud(TWI_t *twi, uint32_t TWI_speed){
 	twi->MASTER.BAUD = TWI_BAUD(F_CPU, TWI_speed);
 }
 
-void twi_init(TWI_t *twi, uint32_t TWI_speed, uint8_t timeout){
+/// "Reasonable defaults" here include settings for TinyG v8 board
+/// This TWI mod involves physically getting rid of CTS/RTS signals
+/// in favor of this I2C compatible (TWI) bus.
+void twi_init() {
+	enable_TWI(&TWIC, BAUD_100K, TIMEOUT_DIS);
+}
+
+void enable_TWI(TWI_t *twi, uint32_t TWI_speed, uint8_t timeout){
 	set_baud(twi, TWI_speed);
 	set_acknowledge(twi, ACK);
 	twi->MASTER.CTRLA = TWI_MASTER_ENABLE_bm;

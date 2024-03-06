@@ -73,6 +73,9 @@
 //set the baud rate of a TWI module
 void set_baud(TWI_t *twi, uint32_t TWI_speed);
 
+// initialises TWI module with "reasonable defaults"
+void twi_init();
+
 //enables a TWI module
 //TWI_speed is used to calculate the baud rate
 //timeout: if you are the only master you should use TIMEOUT_DIS

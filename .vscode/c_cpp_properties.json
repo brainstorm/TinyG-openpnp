@@ -4,7 +4,8 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
-                "/usr/include/**"
+                "/usr/lib/avr/include/**",
+                "/usr/lib/gcc/avr/5.4.0/include/**"
             ],
             "defines": [
                 "__AVR",
@@ -16,9 +17,9 @@
             "cStandard": "c17",
             "intelliSenseMode": "linux-gcc-x64",
             "compilerArgs": [
-                "-mmcu=atmega192a3",     // Will ensure MCU defines are set correctly
-                "-DF_CPU=16000000UL",   // Will ensure F_CPU is set correctly
-                "-Os"                   // Will avoid optimization warnings re: _delay
+                "-mmcu=atmega192a3",
+                "-DF_CPU=16000000UL",
+                "-Os"
             ]
         },
         {
@@ -40,9 +41,9 @@
             "cStandard": "c17",
             "intelliSenseMode": "linux-gcc-x64",
             "compilerArgs": [
-                "-mmcu=atmega192a3",     // Will ensure MCU defines are set correctly
-                "-DF_CPU=16000000UL",   // Will ensure F_CPU is set correctly
-                "-Os"                   // Will avoid optimization warnings re: _delay
+                "-mmcu=atmega192a3",
+                "-DF_CPU=16000000UL",
+                "-Os"
             ]
         }
     ],

@@ -126,7 +126,7 @@ static void _application_init(void)
 	// do these next
 	stepper_init(); 				// stepper subsystem 				- must precede gpio_init()
 	twi_init();						// I2C bus (a.k.a TWI)
-	encoder_init();					// virtual encoders
+	encoder_init();					// encoders (virtual or hardware)
 	switch_init();					// switches
 //	gpio_init();					// parallel IO
 	pwm_init();						// pulse width modulation drivers	- must follow gpio_init()
