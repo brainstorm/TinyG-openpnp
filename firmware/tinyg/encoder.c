@@ -28,6 +28,10 @@
 #include "tinyg.h"
 #include "config.h"
 #include "encoder.h"
+#include "xmega/xmega_twi.h"
+
+// Hardware encoder support
+#include "encoder_as5600.h"
 
 #ifdef __cplusplus
 extern "C"{
@@ -41,15 +45,24 @@ enEncoders_t en;
  **** CODE **************************************************************************
  ************************************************************************************/
 
+// i2c_init and i2c_deinit are already handled elsewhere
+// so we need to do nothing on the as5600 handler for those
+// function pointers.
+void nop() {}
+
 /*
  * encoder_init() - initialize encoders
  */
 
 void encoder_init()
 {
+as5600_handle_t handler = { &nop, &nop, &read_TWI, &send_TWI, 0, printf, 1 };
+// Real hardware sensor(s)
 #ifdef AS_5600_ENCODER
-	as5600_init();
+	as5600_init(&handler);
 #endif
+
+// Fake one
 	memset(&en, 0, sizeof(en));		// clear all values, pointers and status
 	encoder_init_assertions();
 }

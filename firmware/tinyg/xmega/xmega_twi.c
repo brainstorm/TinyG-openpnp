@@ -4,6 +4,8 @@
  * Date: 13-02-2021
  */ 
 
+// Interesting software bit-banging alternative that might not require
+// hardware mods to the TinyG v8 board: https://github.com/dvdfreitag/xmega-software-twi/tree/master
 
 /*
 *	MIT License

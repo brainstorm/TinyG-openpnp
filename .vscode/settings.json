@@ -1,7 +1,8 @@
 {
     "files.associations": {
         "tinyg.h": "c",
-        "xio.h": "c"
+        "xio.h": "c",
+        "encoder.h": "c"
     },
     "cmake.sourceDirectory": "/home/rvalls/dev/personal/TinyG-openpnp/firmware/tinyg"
 }
